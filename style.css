@@ -1,0 +1,130 @@
+/* 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+ */
+@font-face {
+  font-family: "big-john";
+  src: url("./fonts/BigJohn.woff2");
+}
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(#ffffff96, #ffffffa8),
+    url("./img/Pattern1.png");
+  background-size: contain;
+  background-repeat: repeat;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+  /* background: linear-gradient() url("Pattern1.png"); */
+  position: relative;
+  width: 100%;
+  color: #1f1f1f;
+}
+
+.wrapper .hero {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 900;
+  margin: 2rem 3rem 1rem 0;
+  text-align: right;
+}
+
+.wrapper .divider {
+  position: relative;
+  width: 85%;
+  height: 0.1rem;
+  background-color: #f55ec3;
+}
+
+span {
+  position: relative;
+  background-color: rgb(59, 236, 183);
+  color: #000000;
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: normal;
+  padding: 0 1rem;
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  font-family: "Poppins", sans-serif;
+  margin-left: 2rem;
+  font-size: 1.6rem;
+}
+.container ul {
+  flex-basis: 35%;
+}
+.container li {
+  cursor: pointer;
+  margin-top: 4rem;
+  padding-bottom: 2rem;
+  width: 95%;
+  border-radius: 2px;
+  border-bottom: 1px solid rgb(59, 236, 183);
+}
+.container li i {
+  display: inline;
+}
+
+.container li:hover {
+  color: #f55ec3;
+  border-bottom: 3px solid rgb(236, 59, 156);
+}
+
+.container li a {
+  padding-left: 3rem;
+  text-transform: capitalize;
+  z-index: 50;
+  font-weight: 600;
+}
+
+.img-body {
+  margin-top: 3rem;
+  height: 25rem;
+  width: 25rem;
+  align-self: center;
+}
+
+/* ===============================
+Mobile devices
+================================== */
+
+@media only screen and (min-width: 430px) {
+  body {
+    height: 100vh;
+  }
+  .container {
+    flex-flow: row;
+    justify-content: space-around;
+  }
+  .img-body {
+    width: 40rem;
+    height: 40rem;
+    -webkit-filter: drop-shadow(2px 1.5px 1px rgb(255, 255, 255))
+      drop-shadow(-1.5px -1.5px 1px rgb(255, 255, 255));
+    filter: drop-shadow(2px 1.5px 1px rgb(255, 255, 255))
+      drop-shadow(-1.5px -1.5px 1px rgb(255, 255, 255));
+  }
+}
